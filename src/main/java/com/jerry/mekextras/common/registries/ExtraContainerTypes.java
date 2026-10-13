@@ -7,6 +7,7 @@ import com.jerry.mekextras.common.tile.TileEntityExtraEnergyCube;
 import com.jerry.mekextras.common.tile.TileEntityExtraFluidTank;
 import com.jerry.mekextras.common.tile.factory.TileEntityExtraFactory;
 import com.jerry.mekextras.common.tile.machine.TileEntityAdvancedElectricPump;
+import com.jerry.mekextras.common.tile.multiblock.TileEntityPressurizedDynamicTank;
 import com.jerry.mekextras.common.tile.multiblock.TileEntityReinforcedInductionCasing;
 
 import mekanism.common.inventory.container.tile.EmptyTileContainer;
@@ -27,9 +28,9 @@ public class ExtraContainerTypes {
     public static final ContainerTypeRegistryObject<MekanismTileContainer<TileEntityExtraEnergyCube>> EXTRA_ENERGY_CUBE = EXTRA_CONTAINER_TYPES.custom("extra_energy_cube", TileEntityExtraEnergyCube.class).armorSideBar(180, 41, 0).build();
     public static final ContainerTypeRegistryObject<MekanismTileContainer<TileEntityExtraFluidTank>> EXTRA_FLUID_TANK = EXTRA_CONTAINER_TYPES.custom("extra_fluid_tank", TileEntityExtraFluidTank.class).armorSideBar().build();
     public static final ContainerTypeRegistryObject<MekanismTileContainer<TileEntityExtraChemicalTank>> EXTRA_CHEMICAL_TANK = EXTRA_CONTAINER_TYPES.custom("extra_chemical_tank", TileEntityExtraChemicalTank.class).armorSideBar().build();
+    public static final ContainerTypeRegistryObject<MekanismTileContainer<TileEntityPressurizedDynamicTank>> PRESSURIZED_DYNAMIC_TANK = EXTRA_CONTAINER_TYPES.custom("pressurized_dynamic_tank", TileEntityPressurizedDynamicTank.class).armorSideBar().build();
     public static final ContainerTypeRegistryObject<MekanismTileContainer<TileEntityReinforcedInductionCasing>> REINFORCED_INDUCTION_MATRIX = EXTRA_CONTAINER_TYPES.custom("reinforced_induction_matrix", TileEntityReinforcedInductionCasing.class).armorSideBar(-20, 41, 0).build();
     public static final ContainerTypeRegistryObject<EmptyTileContainer<TileEntityReinforcedInductionCasing>> REINFORCED_MATRIX_STATS = EXTRA_CONTAINER_TYPES.registerEmpty("reinforced_matrix_stats", TileEntityReinforcedInductionCasing.class);
-
     public static final ContainerTypeRegistryObject<MekanismTileContainer<TileEntityExtraFactory<?>>> FACTORY = EXTRA_CONTAINER_TYPES.register("factory", factoryClass(), ExtraFactoryContainer::new);
 
     @SuppressWarnings({ "rawtypes", "unchecked" })

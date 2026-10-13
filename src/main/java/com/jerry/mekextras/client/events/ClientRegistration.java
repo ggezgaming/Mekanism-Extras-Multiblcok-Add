@@ -13,6 +13,7 @@ import com.jerry.mekextras.client.render.item.block.RenderExtraFluidTankItem;
 import com.jerry.mekextras.client.render.tileentity.RenderExtraBin;
 import com.jerry.mekextras.client.render.tileentity.RenderExtraEnergyCube;
 import com.jerry.mekextras.client.render.tileentity.RenderExtraFluidTank;
+import com.jerry.mekextras.client.render.tileentity.RenderPressurizedDynamicTank;
 import com.jerry.mekextras.client.render.transmitter.*;
 import com.jerry.mekextras.common.block.attribute.ExtraAttribute;
 import com.jerry.mekextras.common.integration.mekaf.registries.ExtraAdvancedFactoryContainerTypes;
@@ -92,6 +93,10 @@ public class ClientRegistration {
         ClientRegistrationUtil.bindTileEntityRenderer(event, RenderExtraThermodynamicConductor::new, ExtraTileEntityTypes.ABSOLUTE_THERMODYNAMIC_CONDUCTOR,
                 ExtraTileEntityTypes.SUPREME_THERMODYNAMIC_CONDUCTOR, ExtraTileEntityTypes.COSMIC_THERMODYNAMIC_CONDUCTOR, ExtraTileEntityTypes.INFINITE_THERMODYNAMIC_CONDUCTOR);
 
+        ClientRegistrationUtil.bindTileEntityRenderer(
+                event,
+                RenderPressurizedDynamicTank::new,
+                ExtraTileEntityTypes.PRESSURIZED_DYNAMIC_TANK);
         // Generator Extras
         if (MekanismExtras.hooks.mekanismGenerators.isLoaded()) {
             event.registerBlockEntityRenderer(GenExtraTileEntityTypes.NAQUADAH_REACTOR_CONTROLLER.get(), RenderNaquadahReactor::new);
@@ -115,6 +120,7 @@ public class ClientRegistration {
         ClientRegistrationUtil.registerScreen(event, ExtraContainerTypes.EXTRA_ENERGY_CUBE, GuiExtraEnergyCube::new);
         ClientRegistrationUtil.registerScreen(event, ExtraContainerTypes.EXTRA_FLUID_TANK, GuiExtraFluidTank::new);
         ClientRegistrationUtil.registerScreen(event, ExtraContainerTypes.EXTRA_CHEMICAL_TANK, GuiExtraChemicalTank::new);
+        ClientRegistrationUtil.registerScreen(event, ExtraContainerTypes.PRESSURIZED_DYNAMIC_TANK, GuiPressurizedDynamicTank::new);
 
         ClientRegistrationUtil.registerScreen(event, ExtraContainerTypes.FACTORY, GuiExtraFactory::new);
 

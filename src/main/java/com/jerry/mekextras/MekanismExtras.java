@@ -6,6 +6,8 @@ import com.jerry.mekextras.common.command.builders.ExtraBuilders;
 import com.jerry.mekextras.common.config.ExtraConfig;
 import com.jerry.mekextras.common.content.matrix.ReinforcedMatrixMultiblockData;
 import com.jerry.mekextras.common.content.matrix.ReinforcedMatrixValidator;
+import com.jerry.mekextras.common.content.tank.PressurizedDynamicTankMultiblockData;
+import com.jerry.mekextras.common.content.tank.PressurizedDynamicTankValidator;
 import com.jerry.mekextras.common.integration.ExtraHooks;
 import com.jerry.mekextras.common.integration.mekaf.registries.ExtraAdvancedFactoryBlocks;
 import com.jerry.mekextras.common.integration.mekaf.registries.ExtraAdvancedFactoryContainerTypes;
@@ -55,6 +57,7 @@ public class MekanismExtras implements IModModule {
     public final Version versionNumber;
 
     public static final MultiblockManager<ReinforcedMatrixMultiblockData> matrixManager = new MultiblockManager<>("reinforcedInductionMatrix", MultiblockCache::new, ReinforcedMatrixValidator::new);
+    public static final MultiblockManager<PressurizedDynamicTankMultiblockData> pressurizedDynamicTankManager = new MultiblockManager<>("pressurizedDynamicTank", MultiblockCache::new, PressurizedDynamicTankValidator::new);
     public static final MultiblockManager<NaquadahReactorMultiblockData> naquadahReactorManager = new MultiblockManager<>("naquadahReactor", NaquadahReactorCache::new, NaquadahReactorValidator::new);
 
     public static final Logger LOGGER = LogUtils.getLogger();

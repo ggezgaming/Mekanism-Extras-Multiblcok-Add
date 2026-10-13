@@ -1,0 +1,19 @@
+{
+  "type": "mekanism:mek_data",
+  "key": {
+    "A": {
+      "item": "mekanism_extras:alloy_radiance"
+    },
+    "T": {
+      "item": "mekanism:dynamic_tank"
+    }
+  },
+  "pattern": [
+    "ATA",
+    "TAT",
+    "ATA"
+  ],
+  "result": {
+    "id": "mekanism_extras:pressurized_dynamic_tank"
+  }
+}

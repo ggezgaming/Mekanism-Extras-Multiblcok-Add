@@ -1,0 +1,16 @@
+{
+  "ctm": {
+    "ctm_version": 1,
+    "type": "CTM",
+    "layer": "SOLID",
+    "textures": [
+      "mekanism_extras:ctm/pressurized_dynamic_valve"
+    ],
+    "extra": {
+      "connect_to": [
+        { "block": "mekanism_extras:pressurized_dynamic_tank" },
+        { "block": "mekanism_extras:pressurized_dynamic_valve" }
+      ]
+    }
+  }
+}

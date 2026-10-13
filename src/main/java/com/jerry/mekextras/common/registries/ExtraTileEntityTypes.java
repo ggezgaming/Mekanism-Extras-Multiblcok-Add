@@ -18,6 +18,8 @@ import com.jerry.mekextras.common.tile.factory.*;
 import com.jerry.mekextras.common.tile.machine.TileEntityAdvancedElectricPump;
 import com.jerry.mekextras.common.tile.multiblock.TileEntityExtraInductionCell;
 import com.jerry.mekextras.common.tile.multiblock.TileEntityExtraInductionProvider;
+import com.jerry.mekextras.common.tile.multiblock.TileEntityPressurizedDynamicTank;
+import com.jerry.mekextras.common.tile.multiblock.TileEntityPressurizedDynamicValve;
 import com.jerry.mekextras.common.tile.multiblock.TileEntityReinforcedInductionCasing;
 import com.jerry.mekextras.common.tile.multiblock.TileEntityReinforcedInductionPort;
 import com.jerry.mekextras.common.tile.transmitter.*;
@@ -240,6 +242,18 @@ public class ExtraTileEntityTypes {
             .serverTicker(TileEntityMekanism::tickServer)
             .withSimple(Capabilities.CONFIGURABLE)
             .build();
+    // Pressurized Dynamic Tank
+    public static final TileEntityTypeRegistryObject<TileEntityPressurizedDynamicTank> PRESSURIZED_DYNAMIC_TANK = EXTRA_TILE_ENTITY_TYPES
+            .mekBuilder(ExtraBlocks.PRESSURIZED_DYNAMIC_TANK, TileEntityPressurizedDynamicTank::new)
+            .clientTicker(TileEntityMekanism::tickClient)
+            .serverTicker(TileEntityMekanism::tickServer)
+            .build();
+    public static final TileEntityTypeRegistryObject<TileEntityPressurizedDynamicValve> PRESSURIZED_DYNAMIC_VALVE = EXTRA_TILE_ENTITY_TYPES
+            .mekBuilder(ExtraBlocks.PRESSURIZED_DYNAMIC_VALVE, TileEntityPressurizedDynamicValve::new)
+            .clientTicker(TileEntityMekanism::tickClient)
+            .serverTicker(TileEntityMekanism::tickServer)
+            .build();
+
     // Induction Cells
     public static final TileEntityTypeRegistryObject<TileEntityExtraInductionCell> ABSOLUTE_INDUCTION_CELL = EXTRA_TILE_ENTITY_TYPES.builder(ExtraBlocks.ABSOLUTE_INDUCTION_CELL, (pos, state) -> new TileEntityExtraInductionCell(ExtraBlocks.ABSOLUTE_INDUCTION_CELL, pos, state)).build();
     public static final TileEntityTypeRegistryObject<TileEntityExtraInductionCell> SUPREME_INDUCTION_CELL = EXTRA_TILE_ENTITY_TYPES.builder(ExtraBlocks.SUPREME_INDUCTION_CELL, (pos, state) -> new TileEntityExtraInductionCell(ExtraBlocks.SUPREME_INDUCTION_CELL, pos, state)).build();

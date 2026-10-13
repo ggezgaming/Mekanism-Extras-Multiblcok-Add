@@ -15,6 +15,8 @@ import com.jerry.mekextras.common.tile.*;
 import com.jerry.mekextras.common.tile.machine.TileEntityAdvancedElectricPump;
 import com.jerry.mekextras.common.tile.multiblock.TileEntityExtraInductionCell;
 import com.jerry.mekextras.common.tile.multiblock.TileEntityExtraInductionProvider;
+import com.jerry.mekextras.common.tile.multiblock.TileEntityPressurizedDynamicTank;
+import com.jerry.mekextras.common.tile.multiblock.TileEntityPressurizedDynamicValve;
 import com.jerry.mekextras.common.tile.multiblock.TileEntityReinforcedInductionCasing;
 import com.jerry.mekextras.common.tile.multiblock.TileEntityReinforcedInductionPort;
 import com.jerry.mekextras.common.tile.transmitter.TileEntityExtraLogisticalTransporter;
@@ -158,6 +160,18 @@ public class ExtraBlockTypes {
             .with(Attributes.INVENTORY, Attributes.COMPARATOR, Attributes.ACTIVE)
             .externalMultiblock()
             .withComputerSupport("reinforcedInductionPort")
+            .build();
+
+    // Pressurized Dynamic Tank
+    public static final BlockTypeTile<TileEntityPressurizedDynamicTank> PRESSURIZED_DYNAMIC_TANK = BlockTypeTile.BlockTileBuilder
+            .createBlock(() -> ExtraTileEntityTypes.PRESSURIZED_DYNAMIC_TANK, MekanismLang.DESCRIPTION_DYNAMIC_TANK)
+            .withGui(() -> ExtraContainerTypes.PRESSURIZED_DYNAMIC_TANK, MekanismLang.DYNAMIC_TANK)
+            .externalMultiblock()
+            .build();
+    public static final BlockTypeTile<TileEntityPressurizedDynamicValve> PRESSURIZED_DYNAMIC_VALVE = BlockTypeTile.BlockTileBuilder
+            .createBlock(() -> ExtraTileEntityTypes.PRESSURIZED_DYNAMIC_VALVE, MekanismLang.DESCRIPTION_DYNAMIC_TANK)
+            .withGui(() -> ExtraContainerTypes.PRESSURIZED_DYNAMIC_TANK, MekanismLang.DYNAMIC_TANK)
+            .externalMultiblock()
             .build();
 
     // Induction Cells

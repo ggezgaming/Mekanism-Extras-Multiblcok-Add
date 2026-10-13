@@ -4,7 +4,9 @@ import com.jerry.mekextras.common.registries.ExtraBlockTypes;
 import com.jerry.mekextras.common.tile.multiblock.TileEntityExtraInductionCell;
 import com.jerry.mekextras.common.tile.multiblock.TileEntityExtraInductionProvider;
 
+import mekanism.common.config.MekanismConfig;
 import mekanism.common.content.blocktype.BlockType;
+import mekanism.common.lib.math.voxel.VoxelCuboid;
 import mekanism.common.lib.multiblock.CuboidStructureValidator;
 import mekanism.common.lib.multiblock.FormationProtocol;
 import mekanism.common.util.WorldUtils;
@@ -24,6 +26,15 @@ public class ReinforcedMatrixValidator extends CuboidStructureValidator<Reinforc
 
     private final List<TileEntityExtraInductionCell> cells = new ArrayList<>();
     private final List<TileEntityExtraInductionProvider> providers = new ArrayList<>();
+
+    public ReinforcedMatrixValidator() {
+        super(
+                new VoxelCuboid(3, 3, 3),
+                new VoxelCuboid(
+                        MekanismConfig.general.inductionMatrixMaxSize.get(),
+                        MekanismConfig.general.inductionMatrixMaxSize.get(),
+                        MekanismConfig.general.inductionMatrixMaxSize.get()));
+    }
 
     @Override
     protected FormationProtocol.CasingType getCasingType(BlockState state) {

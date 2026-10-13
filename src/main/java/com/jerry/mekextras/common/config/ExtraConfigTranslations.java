@@ -19,6 +19,21 @@ import java.util.stream.Stream;
 
 public enum ExtraConfigTranslations implements IConfigTranslation {
 
+    PRESSURIZED_DYNAMIC_TANK_MAX_SIZE(
+            "general.pressurized_dynamic_tank.max_size",
+            "Maximum Size",
+            "Maximum size of the Pressurized Dynamic Tank in blocks."),
+
+    PRESSURIZED_DYNAMIC_TANK_FLUID_PER_VOLUME(
+            "general.pressurized_dynamic_tank.fluid_per_volume",
+            "Fluid Capacity",
+            "Amount of fluid in mB stored per volume block of the Pressurized Dynamic Tank."),
+
+    PRESSURIZED_DYNAMIC_TANK_CHEMICAL_PER_VOLUME(
+            "general.pressurized_dynamic_tank.chemical_per_volume",
+            "Chemical Capacity",
+            "Amount of chemical in mB stored per volume block of the Pressurized Dynamic Tank."),
+
     GENERAL_ADVANCED_PUMP_HEAVY_WATER("general.pump.heavy_water", "Heavy Water Amount",
             "Amount of Heavy Water in mB that is extracted per block of Water by the Advanced Electric Pump with a Filter Upgrade."),
 

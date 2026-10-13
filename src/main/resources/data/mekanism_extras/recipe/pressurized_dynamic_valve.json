@@ -1,0 +1,22 @@
+{
+  "type": "mekanism:mek_data",
+  "key": {
+    "A": {
+      "item": "mekanism_extras:alloy_radiance"
+    },
+    "T": {
+      "item": "mekanism:dynamic_tank"
+    },
+    "C": {
+      "item": "mekanism_extras:absolute_control_circuit"
+    }
+  },
+  "pattern": [
+    "ATA",
+    "TCT",
+    "ATA"
+  ],
+  "result": {
+    "id": "mekanism_extras:pressurized_dynamic_valve"
+  }
+}

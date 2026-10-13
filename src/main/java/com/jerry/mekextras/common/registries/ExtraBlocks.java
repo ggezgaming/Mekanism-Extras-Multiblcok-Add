@@ -30,6 +30,8 @@ import com.jerry.mekextras.common.tile.factory.TileEntityExtraFactory;
 import com.jerry.mekextras.common.tile.machine.TileEntityAdvancedElectricPump;
 import com.jerry.mekextras.common.tile.multiblock.TileEntityExtraInductionCell;
 import com.jerry.mekextras.common.tile.multiblock.TileEntityExtraInductionProvider;
+import com.jerry.mekextras.common.tile.multiblock.TileEntityPressurizedDynamicTank;
+import com.jerry.mekextras.common.tile.multiblock.TileEntityPressurizedDynamicValve;
 import com.jerry.mekextras.common.tile.multiblock.TileEntityReinforcedInductionCasing;
 import com.jerry.mekextras.common.tile.multiblock.TileEntityReinforcedInductionPort;
 import com.jerry.mekextras.common.tile.transmitter.TileEntityExtraLogisticalTransporter;
@@ -155,6 +157,10 @@ public class ExtraBlocks {
 
     public static final BlockRegistryObject<BlockBasicMultiblock<TileEntityReinforcedInductionCasing>, ItemBlockTooltip<BlockBasicMultiblock<TileEntityReinforcedInductionCasing>>> REINFORCED_INDUCTION_CASING = registerBlock("reinforced_induction_casing", () -> new BlockBasicMultiblock<>(ExtraBlockTypes.REINFORCED_INDUCTION_CASING, properties -> properties.mapColor(MapColor.COLOR_LIGHT_GRAY)));
     public static final BlockRegistryObject<BlockBasicMultiblock<TileEntityReinforcedInductionPort>, ItemBlockTooltip<BlockBasicMultiblock<TileEntityReinforcedInductionPort>>> REINFORCED_INDUCTION_PORT = registerBlock("reinforced_induction_port", () -> new BlockBasicMultiblock<>(ExtraBlockTypes.REINFORCED_INDUCTION_PORT, properties -> properties.mapColor(MapColor.COLOR_LIGHT_GRAY)));
+
+    // Pressurized Dynamic Tank
+    public static final BlockRegistryObject<BlockBasicMultiblock<TileEntityPressurizedDynamicTank>, ItemBlockTooltip<BlockBasicMultiblock<TileEntityPressurizedDynamicTank>>> PRESSURIZED_DYNAMIC_TANK = registerBlock("pressurized_dynamic_tank", () -> new BlockBasicMultiblock<>(ExtraBlockTypes.PRESSURIZED_DYNAMIC_TANK, properties -> properties.mapColor(MapColor.COLOR_LIGHT_GRAY)));
+    public static final BlockRegistryObject<BlockBasicMultiblock<TileEntityPressurizedDynamicValve>, ItemBlockTooltip<BlockBasicMultiblock<TileEntityPressurizedDynamicValve>>> PRESSURIZED_DYNAMIC_VALVE = registerBlock("pressurized_dynamic_valve", () -> new BlockBasicMultiblock<>(ExtraBlockTypes.PRESSURIZED_DYNAMIC_VALVE, properties -> properties.mapColor(MapColor.COLOR_LIGHT_GRAY)));
 
     public static final BlockRegistryObject<BlockTile<TileEntityExtraInductionCell, BlockTypeTile<TileEntityExtraInductionCell>>, ItemBlockExtraInductionCell> ABSOLUTE_INDUCTION_CELL = registerInductionCell(ExtraBlockTypes.ABSOLUTE_INDUCTION_CELL);
     public static final BlockRegistryObject<BlockTile<TileEntityExtraInductionCell, BlockTypeTile<TileEntityExtraInductionCell>>, ItemBlockExtraInductionCell> SUPREME_INDUCTION_CELL = registerInductionCell(ExtraBlockTypes.SUPREME_INDUCTION_CELL);
